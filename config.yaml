@@ -1,0 +1,11 @@
+balancers:
+    - uri: localhost/hello
+      type: round-robin
+      real-servers:
+        - name: localhost:5000/hello
+        - name: localhost:5001/hello
+    - uri: localhost/hello2
+      type: random
+      real-servers:
+        - name: localhost:5000/hello
+        - name: localhost:5001/hello
